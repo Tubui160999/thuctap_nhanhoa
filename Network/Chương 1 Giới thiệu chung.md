@@ -38,9 +38,9 @@ Khi mô tả các thành phần mạng, cần phân biệt giữa khái niệm t
 ### Phương tiện và các giao thức truyền thông mạng 
 Để chia sẻ và sử dụng dịch vụ trên mạng, các thành phần của mạng phải có khả năng truyền thông được với nhau. Để đáp ứng được yêu cầu này, ta cần xét tới hai tiêu chí cụ thể của mạng:
 
-Khả năng liên kết (connectivity): Chỉ đường truyền hoặc kết nối vật lý giữa các thành phần
+- Khả năng liên kết (connectivity): Chỉ đường truyền hoặc kết nối vật lý giữa các thành phần
 
-Ngôn ngữ (language): Chỉ một bảng từ vựng cùng các quy tắc truyền thông mà các thành phần phải tuân thủ
+- Ngôn ngữ (language): Chỉ một bảng từ vựng cùng các quy tắc truyền thông mà các thành phần phải tuân thủ
 
 ### Môi trường truyền thông
 Môi trường vật lý sử dụng kết nối các thành phần của mạng thường được gọi là môi trường truyền thông (medium, media). Môi trường truyền thông mạng được chia thành hai loại: cáp (cable) và không dây (wirelesss). Ví dụ, cáp truyền thông có thể là cáp xoắn đôi(twisted-pair), cáp đồng trục (coaxial) và cáp sợi quang (fiber-optic cable)... Truyền thông không dây có thể là sóng radio ...
@@ -62,7 +62,7 @@ Mạng diện rộng (Wide Area Network - WAN): Liên kết tài nguyên máy t�
 
 ![](./images/mangwan.png)
 
-Mạng đô thị (Metropolitan Area Network - MAN): Liên kết các tài nguyên máy tính trong một thành phố. Mạng MAN được dùng để chỉ các mạng có diện hoạt động lớn hơn LAN nhưng nhỏ hơn WAN\
+Mạng đô thị (Metropolitan Area Network - MAN): Liên kết các tài nguyên máy tính trong một thành phố. Mạng MAN được dùng để chỉ các mạng có diện hoạt động lớn hơn LAN nhưng nhỏ hơn WAN
 - Mạng MAN - kết hợp của nhiều mạng LAN trong một vùng địa lý
 
 ![](./images/mangman.png)
@@ -121,6 +121,7 @@ Kiến trúc phân tầng: Mô hình OSI gồm 7 tầng
 - Tầng ứng dụng (Application layer)
 
 - Mô hình OSI
+
 ![](./images/mohinhosi.png)
 
 ## 1.2.2 Chức năng của các tầng
@@ -135,7 +136,7 @@ Kiến trúc phân tầng: Mô hình OSI gồm 7 tầng
 ## 1.2.3 Quy trình truyền dữ liệu trong OSI
 Khi đi từ thiết bị A đến thiết bị B
 
-![](./images/minhhoaosiosi.png)
+![](./images/minhhoaosi.png)
 
 **Phía máy gửi**
 - Tại tầng 7 (Tầng ứng dụng): Người dùng tiến hành đưa thông tin cần gửi vào máy tính. Các thông tin cần gửi này có dạng như: hình ảnh, văn bản... Sau đó thông tin dữ liệu được chuyển xuống tầng trình diễn
