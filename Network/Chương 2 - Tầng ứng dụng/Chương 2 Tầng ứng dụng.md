@@ -72,7 +72,11 @@ Ví dụ về hệ thống cache liên hợp: cache NLANR, cache cluster
 - Cache NLANR lấy đối tượng từ cache khác bằng cách kết hợp sử dụng giao thức HTTP và ICP (Internet caching protocol - là giao thức ở tầng ứng dụng cho phép cache nhanh chóng xác định một cache khác có đối tượng nào đó hay không, nếu có thì nó sẽ dùng giao thức HTTP để lấy đối tượng về) 
 - Cache cluster (cụm cache): Hash routing (tìm kiếm theo hàm băm) được đưa ra để giải quyết vấn đề khi yêu cầu cần không biết gửi đến cache nào trong cụm cache. Trình duyệt thực hiện phép "băm" trên địa chỉ URL, trình duyệt sẽ căn cứ vào kết quả để gửi yêu cầu đến một trong các cache trong cụm. Tìm kiếm theo hàm băm là cốt lõi của giao thức Cache Array Routing (CARP)
 ## 2.2.7 Web tĩnh, web động, web tích cực
-- Một trang web động không tồn tại dưới dạng 1 file cố định trên web server. Web động chỉ được tạo ra khi nhận được một yêu cầu cụ thể từ trình duyệt Web
+- Web tĩnh: Là một file HTML cụ thể nằm trên web server
+	+ Ưu điểm: Đơn giản, tiện dụng và tin cậy. Trang web tĩnh có một định dạng cố định và bất biến, trình duyệt có thể hiện thị nhanh chóng một trang web tĩnh
+	+ Nhược điểm: Thiếu linh hoạt. Khi phải thay đổi, cần phải chỉnh sửa lại mỗi trang web tĩnh, điều này không được làm tự động mà phải làm thủ công. Do đó trang web tĩnh không thích hợp khi cung cấp các thông tin thay đổi thường xuyên
+
+- Web động không tồn tại dưới dạng 1 file cố định trên web server. Web động chỉ được tạo ra khi nhận được một yêu cầu cụ thể từ trình duyệt Web
 - Việc triển khai web động được thực hiện ở phía server, server phải bổ sung thêm khả năng chạy một chương trình ứng dụng nào đó để tạo ra nội dung 1 trang web khi có yêu cầu từ trình duyệt. Mỗi một kiểu trả lời phải có một chương trình ứng dụng riêng. Do đó server phải có khả năng chuyển yêu cầu đến từ trình duyệt cho chương trình ứng dụng cụ thể
 - Khi nhận được một yêu cầu, web server sẽ chạy một chương trình ứng dụng nào đó để tạo ra nội dung một văn bản, sau đó văn bản này được trả về cho trình duyệt
 	+ Ưu điểm: khả năng hiển thị ngay lập tức thông tin hiện thời từ phía server. Những thông tin thay đổi thường xuyên như dự báo thời tiết... 
@@ -81,10 +85,6 @@ Ví dụ về hệ thống cache liên hợp: cache NLANR, cache cluster
 - Web tích cực (active Web) là loại văn bản có chứa chương trình, chương trình này có khả năng tính toán và hiển thị thông tin. Khi trình duyệt yêu cầu, server sẽ gửi cho trình duyệt một văn bản có đính kèm chương trình. Trình duyệt sẽ chạy chương trình này tại máy cục bộ, chương trình có thể tương tác với người sử dụng.
 	+ Ưu điểm: Có khả năng cập nhật thông tin liên tục do Web tích cực tương tác trực tiếp với server để cập nhật thông tin liên tục
 	+ Nhược điểm: Chi phí xây dựng và khả năng an ninh hệ thống. Vì phải tải và thực thi một chương trình từ server, nên phải có khả năng đảm bảo chương trình này không làm gì có hại trên máy tính client
-
-- Web tĩnh: Là một file HTML cụ thể nằm trên web server
-	+ Ưu điểm: Đơn giản, tiện dụng và tin cậy. Trang web tĩnh có một định dạng cố định và bất biến, trình duyệt có thể hiện thị nhanh chóng một trang web tĩnh
-	+ Nhược điểm: Thiếu linh hoạt. Khi phải thay đổi, cần phải chỉnh sửa lại mỗi trang web tĩnh, điều này không được làm tự động mà phải làm thủ công. Do đó trang web tĩnh không thích hợp khi cung cấp các thông tin thay đổi thường xuyên
 ## 2.2.8 Chuẩn CGI (Common Gateway Interface)
 CGI là một trong những công nghệ sử dụng rộng rãi khi xây dựng web động. Chuẩn CGI quy định cách thức web server tương tác với chương trình ứng dụng 
 ## 2.2.9 Các kỹ thuật phía Server 
