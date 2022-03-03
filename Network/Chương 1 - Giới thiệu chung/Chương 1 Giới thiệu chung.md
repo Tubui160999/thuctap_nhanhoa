@@ -164,6 +164,8 @@ Khi đi từ thiết bị A đến thiết bị B
 
 Bộ giao thức TCP/IP được sử dụng trên Internet. Các tầng trong bộ giao thức TCP/IP không giống hệt các tầng trong mô hình OSI
 
+TCP/IP là giao thức đượct tạo thành bởi các module độc lập, mỗi module cung cấp một chức năng nhất định, tuy nhiên không nhất thiết phải độc lập với nhau
+
 Bộ giao thức TCP/IP có 5 tầng:
 - Tầng vật lý: Tương đương với tầng liên kết dữ liệu và tầng vật lý của mô hình OSI
 - Tầng mạng: Tương đương với tầng mạng của mô hình OSI
