@@ -1,6 +1,6 @@
 ## 2.1 Giao thức tầng ứng dụng
 ### 2.1.1 Giao thức tầng ứng dụng
-- Mô hình client/server: Giao thức ứng dụng mạng thường chia làm 2 phía, phía client và phía server. Phía client trong thiết bị này liên lạc với phía server trong thiết bị khác. Ví dụ trình duyệt web là phía client và web server là phía server của HTTP
+- Mô hình client/server: Giao thức ứng dụng mạng thường chia làm 2 phía, phía client và phía server. Phía client trong thiết bị này liên lạc với phía server trong thiết bị khác. Ví dụ trình duyệt web là phía client và web server là phía server của HTTP.
 
 ![](./images/chuong2mohinhclientserver.png)
 
