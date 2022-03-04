@@ -103,7 +103,7 @@ tubui.com IN NS ns2.zonedns.com
 - PTR record (Pointer): Hệ thống tên miền thông thường cho phép chuyển đổi từ tên miền sang địa chỉ IP. Trong thực tế, một số dịch vụ Internet đòi hỏi hệ thống máy chủ DNS phải có chức năng chuyển đổi từ địa chỉ IP sang tên miền. Tên miền ngược thường được sử dụng trong một số trường hợp xác thực email gửi đi
 Ngoài những lại bản ghi trên vẫn còn các loại bản ghi khác như SOA record, AAAA record, SRV record, DKIM record, SPF record
 ## 2.5.4 Thông điệp DNS
-Có hai loại thông điệp DNS: Thông điệp yêu cầu và thông điệp trả lời
+Có hai loại thông điệp DNS: Thông điệp yêu cầu và thông điệp trả lời.
 
 ![](./images/chuong2thongdiepdns.png)
 
