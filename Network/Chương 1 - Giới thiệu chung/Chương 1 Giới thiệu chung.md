@@ -40,7 +40,7 @@ Khi mô tả các thành phần mạng, cần phân biệt giữa khái niệm t
 
 - Khả năng liên kết (connectivity): Chỉ đường truyền hoặc kết nối vật lý giữa các thành phần
 
-- Ngôn ngữ (language): Chỉ một bảng từ vựng cùng các quy tắc truyền thông mà các thành phần phải tuân thủ
+- Ngôn ngữ (language): Chỉ một bảng từ vựng cùng các quy tắc truyền thông mà các thành phần phải tuân thủ.
 
 ### Môi trường truyền thông
 Môi trường vật lý sử dụng kết nối các thành phần của mạng thường được gọi là môi trường truyền thông (medium, media). Môi trường truyền thông mạng được chia thành hai loại: cáp (cable) và không dây (wirelesss). Ví dụ, cáp truyền thông có thể là cáp xoắn đôi(twisted-pair), cáp đồng trục (coaxial) và cáp sợi quang (fiber-optic cable)... Truyền thông không dây có thể là sóng radio ...
