@@ -120,4 +120,4 @@ Dịch vụ truyền dữ liệu tin cậy không chỉ nằm ở tầng giao v�
 	+ Threshold (ngưỡng)
 - Khi cửa sổ tắc nghẽn chưa vượt qua ngưỡng, cửa sổ sẽ tăng theo hàm mũ
 - Khi cửa sổ tắc nghẽn vượt qua ngưỡng, cửa sổ sẽ tăng tuyến tính
-- Khi timeout, giá trị ngưỡng bằng một nửa giá trị cửa sổ tắc nghẽn hiện thời và cửa sổ tắc nghẽn nhận giá trị 1
+- Khi timeout, giá trị ngưỡng bằng một nửa giá trị cửa sổ tắc nghẽn hiện thời và cửa sổ tắc nghẽn nhận giá trị 1.
