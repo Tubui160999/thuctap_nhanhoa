@@ -103,7 +103,7 @@ Dịch vụ truyền dữ liệu tin cậy không chỉ nằm ở tầng giao v�
 		+ Bit SYN sẽ được thiết lập giá trị bằng 1
 		+ Trường biên nhận trong tiêu đề nhận giá trị client_isn+1
 		+ Server chọn số thứ tự bắt đầu của mình (server_isn) và đặt giá trị này vào trường số thứ tự trong tiêu đề của segment
-	+ Bước 3: Khi server chấp nhận kết nối. Client gửi segment thứ 3 biên nhận cho segment chấp nhận kết nối từ server (bằng cách đặt giá trị server_isn+1 vào trường số biên nhận trong tiêu đề của TCP segment)
+	+ Bước 3: Khi server chấp nhận kết nối. Client gửi segment thứ 3 biên nhận cho segment chấp nhận kết nối từ server (bằng cách đặt giá trị server_isn+1 vào trường số biên nhận trong tiêu đề của TCP segment).
 
 ![](./images/battay3buoc.png)
 
