@@ -49,15 +49,15 @@
 ![](./images/caclopdiachimangipv4.png)
 
 - Lớp A
-	+ Định dạng: Net.Host.Host.Host
+	+ Định dạng: NetID.HostID.HostID.HostID
 	+ Bit đầu tiên phải là bit 0. Dạng nhị phân của octet này là 0xxxxxxx
 	+ Lớp A có 2^7 - 2 = 126 mạng từ 1.0.0.0 đến 126.0.0.0
 - Lớp B
-	+ Định dạng: Net.Net.Host.Host
+	+ Định dạng: NetID.NetID.HostID.HostID
 	+ Hai bit đầu tiên của byte đầu tiên phải là 10. Dạng nhị phân của octet này là 10xxxxxx
 	+ Lớp B có 2^14 mạng khác nhau từ 128.0.0.0 đến 191.255.0.0
 - Lớp C
-	+ Định dạng: Net.Net.Net.Host
+	+ Định dạng: NetID.NetID.NetID.HostID
 	+ 3 bit đầu tiên của byte đầu tiên phải là 110. Dạng nhị phân của octet này là 110xxxxx
 	+ Lớp C có 2^22 mạng khác nhau từ 192.0.0.0 đén 223.255.255.0
 - Lớp D:
