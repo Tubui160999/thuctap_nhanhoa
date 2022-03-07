@@ -43,7 +43,7 @@
 
 - Việc đặt địa chỉ IP phải tuân thủ theo các quy tắc sau:
 	+ Các bit phần mạng không được phép đồng thời bằng 0
-- Nếu các bit phần host đồng thời bằng 0, ta có một địa chỉ mạng 
+- Nếu các bit phần host đồng thời bằng 0, ta có một địa chỉ mạng .
 ### Các lớp địa chỉ mạng 
 
 ![](./images/caclopdiachimangipv4.png)
