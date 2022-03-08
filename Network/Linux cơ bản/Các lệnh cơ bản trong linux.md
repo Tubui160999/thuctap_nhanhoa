@@ -1,7 +1,7 @@
 # 1. Lệnh cơ bản trên hệ thống
 - `# exit` hoặc `# logout` : thoát ra khỏi trạng thái đăng nhập
 - `# reboot`: Khởi động lại hệ thống
-- `# ps`: Liệt kê các tiến trình đang hiện hành và PID (Process ID) của tiến trình đó
+- `# ps`: Liệt kê các tiến trình đang hiện hành và PID (Process ID) của tiến trình đó.
 
 ![](./images/lenhps.png)
 
