@@ -43,12 +43,12 @@
 	+ -g: Hiển thị dưới dạng Gb
 - `# hostnamectl`: Xem thông tin hostname hiện tại của máy
 - `# uname`: Kiểm tra hệ điều hành đang sử dụng
-- `yum update`: Cập nhật hệ thống
-- `init 0`: Tắt máy
-- `init 6`: Khởi động lại 
-- `w`: Kiểm tra các phiên SSH
-- `df -h`: Hiển thị dung lượng ổ cứng của máy (dung lượng sẵn sàng và được sử dụng...)
-- `df -i`: Hiển thị thông tin Inodes của máy (tổng số file đã tạo ra, số file còn có thể tạo, số file đã tạo...)
+- `# yum update`: Cập nhật hệ thống
+- `# init 0`: Tắt máy
+- `# init 6`: Khởi động lại 
+- `# w`: Kiểm tra các phiên SSH
+- `# df -h`: Hiển thị dung lượng ổ cứng của máy (dung lượng sẵn sàng và được sử dụng...)
+- `# df -i`: Hiển thị thông tin Inodes của máy (tổng số file đã tạo ra, số file còn có thể tạo, số file đã tạo...)
 # 2. Thao tác với tập tin
 - `# ls`: Xem danh sách các file và thư mục hiện hành
 - `# ll`: Xem danh sách các file và thư mục hiện hành chi tiết
