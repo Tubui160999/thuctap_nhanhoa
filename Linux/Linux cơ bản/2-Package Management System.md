@@ -1,6 +1,7 @@
 # Pagekage Management Systems (Hệ thống quản lí package)
 - Các phần cốt lõi của các bản phân phối Linux và hầu hết các phần mềm của nó được cài thông qua `Packet Management System`. Mỗi gói chứa các tệp và các hướng dẫn khác cần thiết để làm cho một thành phần phần mềm hoạt động trên hệ thống. Các gói phụ thuộc lẫn nhau
-- Có 2 lựa chọn quản lý gói : 'dpkg' và 'rpm'. Hai hệ thống không tương thích nhưng cung cấp các tính năng giống nhau ở mức độ rộng rãi
+- Có 2 lựa chọn quản lý gói : 'dpkg' và 'rpm'. Hai hệ thống không tương thích nhưng cung cấp các tính năng giống nhau ở mức độ rộng rãi.
+
 |High Level Tool|Low Level Tool|Family|
 |---------------|--------------|------|
 |zypper|rpm|SUSE|
