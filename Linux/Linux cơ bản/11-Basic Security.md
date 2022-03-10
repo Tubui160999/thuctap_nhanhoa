@@ -6,7 +6,7 @@
 	+ Virtualization: Phần cứng tách biệt với các tiến trình đồng thời tách biệt với phần cứng mà các máy ảo sử dụng trên cùng một host vật lý
 ## Mã hóa mật khẩu
 - Hầu hết các phiên bản của Linux đều sử dụng cơ chế mã hóa mật khẩu bằng thuật toán "SHA-512"
-- SHA-512 được sử dụng rộng rãi để bảo vệ các ứng dụng và giao thức như TLS, SSL, PHP, S/MINE và IPsec
+- SHA-512 được sử dụng rộng rãi để bảo vệ các ứng dụng và giao thức như TLS, SSL, PHP, S/MINE và IPsec.
 ## Vòng đời password (Password Aging)
 - Password Aging là 1 phương pháp để nhắc nhở người dùng tạo mật khẩu mới sau 1 khoảng thời gian dài sử dụng nhằm nâng cao tính bảo mật 
 - Sử dụng lệnh `chage -l <user>` để xem thông tin mật khẩu của người dùng muốn xem
