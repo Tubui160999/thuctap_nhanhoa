@@ -21,7 +21,7 @@ systemctl enable libvirtd
 
 - Lệnh `virsh` dùng để kiểm tra và cấu hình mạng ảo
 ```sh
-virsh net-list
+virsh net-list.
 ```
 
 ![](./images/virsh.png)
