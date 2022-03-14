@@ -62,7 +62,7 @@ mdadm --create --verbose /dev/md0 --level=0 --raid-devices=2 /dev/sdb /dev/sdc
 
 ![](./images/raid1.png)
 
-- Mỗi khi dữ liệu được ghi vào một thiết bị RAID 1, nó sẽ được chuyển đến cả 2 ổ đĩa trong cặp
+- RAID-1 có phương thức ghi dữ liệu là tạo bản sao, nghĩa là cả 2 ổ đĩa đều có dữ liệu như nhau
 - Chế độ này có dự phòng
 - RAID-1 có thể sử dụng trên 2 hoặc nhiều đĩa với nhiều đĩa dự phòng hoặc không
 - Chế độ này duy trì 1 bản sao chính xác thông tin của một đĩa trên các đĩa khác
@@ -127,3 +127,7 @@ mdadm --manage /dev/md0 -f /dev/sdd
 mdadm --manage /dev/mdadm -r /dev/sdd
 ```
 
+>> RAID-0 được sử dụng cho các ổ đĩa tạm cần tốc độ cao, ví dụ: lưu trữ cơ sở dữ liệu web. Không nên sử dụng RAID 0 để lưu trữ dữ liệu lâu dài
+>> RAID-1 được sử dụng để lưu trữ và quản lý những tài liệu quan trọng như các máy chủ lưu thông tin khách hàng hoặc tài khoản
+>> RAID-5 đang là sự lựa chọn tối ưu nhờ khả năng sửa lỗi lẫn tăng tốc độ đọc ghi dữ liệu
+>> RAID-10 là sự kết hợp của RAID-1 và RAID-0 
