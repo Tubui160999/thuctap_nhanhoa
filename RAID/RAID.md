@@ -45,10 +45,14 @@ mdadm: array /dev/md0 started
 ```
 
 ### Chế độ RAID-0
-- Còn được gọi là chế độ "sọc"
+
+![](./images/raid0.png)
+
+- Dữ liệu được ghi trên các ổ đĩa hay còn gọi là "sọc". Điều này có nghĩa là nó có thể được đọc đồng thời từ nhiều ổ đĩa 
 - Các thiết bị phải có cùng kích thước 
 - Không thể cứu dữ liệu nếu một ổ đĩa bị lỗi
 - Hiệu suất đọc và ghi sẽ tăng lên, vì việc đọc và ghi được thực hiện song song trên các thiết bị
+- 
 
 >> Để tạo 2 đĩa ở chế độ RAID 0 bằng `mdadm`
 ```sh
@@ -56,6 +60,10 @@ mdadm --create --verbose /dev/md0 --level=0 --raid-devices=2 /dev/sdb /dev/sdc
 ```
 
 ### Chế độ RAID-1
+
+![](./images/raid1.png)
+
+- Mỗi khi dữ liệu được ghi vào một thiết bị RAID 1, nó sẽ được chuyển đến cả 2 ổ đĩa trong cặp
 - Chế độ này có dự phòng
 - RAID-1 có thể sử dụng trên 2 hoặc nhiều đĩa với nhiều đĩa dự phòng hoặc không
 - Chế độ này duy trì 1 bản sao chính xác thông tin của một đĩa trên các đĩa khác
@@ -82,6 +90,10 @@ mdadm --create --verbose /dev/md0 --level=4 --raid-devices=4 /dev/sdb /dev/sdc /
 ```
 
 ### Chế độ RAID-5
+
+![](./images/raid5.png)
+
+- Thay vì lưu trữ bản sao hoàn chỉnh của dữ liệu, RAID-5 có thể tiết kiệm dung lượng bằng cách lưu trữ dữ liệu chẵn lẻ. Tính chẵn lẻ cho phép các RAID tái tạo lại dữ liệu được lưu trữ trên các ổ đĩa bị lỗi
 - RAID-5 có thể được sử dụng trên ba hoặc nhiều đĩa, với nhiều đĩa dự phòng hoặc không
 - Kích thước thiết bị RAID-5 sẽ là (N-1)*S, giống như RAID-4
 - Sự khác biệt lớn giữa RAID-5 và -4 là thông tin chẵn lẻ được phân phối đồng đều giữa các ổ đĩa tham gia
@@ -115,3 +127,4 @@ mdadm --add /dev/md0 /dev/sdd
 mdadm --manage /dev/md0 -f /dev/sdd
 mdadm --manage /dev/mdadm -r /dev/sdd
 ```
+
