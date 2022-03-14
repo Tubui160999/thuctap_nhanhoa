@@ -81,7 +81,7 @@ mdadm --create --verbose /dev/md0 --level=1 --raid-devices=2 /dev/sdb /dev/sdc -
 - Mức RAID này không được sử dụng thường xuyên
 - Có thể sử dụng trên 3 hoặc nhiều đĩa
 - Thay vì sao chép hoàn toàn thông tin, nó giữ thông tin chẵn lẻ trên một ổ đĩa và ghi dữ liệu vào các đĩa khác theo cách giống như RAID-0
-- Vì một đĩa được dành riêng cho thông tin chẵn lẻ, kích thước của mảng sẽ là (N-1)*S, trong đó S là kích thước của ổ đĩa nhỏ nhất trong mảng
+- Vì một đĩa được dành riêng cho thông tin chẵn lẻ, kích thước của mảng sẽ là (N-1)*S, trong đó S là kích thước của ổ đĩa nhỏ nhất trong mảng.
 - Nếu một ổ đĩa bị lỗi, thông tin chẵn lẻ có thể được sử dụng để tái tạo lại tất cả dữ liệu. Nếu hai ổ đĩa bị lỗi, tất cả dữ liệu sẽ bị mất
 
 >> Thiết lập RAID-4 với 4 đĩa và 1 đĩa dự phòng bằng `mdadm`
