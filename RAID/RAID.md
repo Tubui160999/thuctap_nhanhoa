@@ -22,7 +22,7 @@ yum install mdadm -y
 ```
 ### Tệp cấu hình 
 - Tệp `/etc/mdadm.conf` được sử dụng để xác định thiết bị nào là thiết bị RAID và thiết bị củ thể thuộc về mảng nào
-- Mặc định tệp này không tồn tại và cần phải tạo thủ công
+- Mặc định tệp này không tồn tại và cần phải tạo thủ công,
 ### Tạo thiết bị RAID
 - Để liệt kệ các option tạo thiết bị RAID với `mdadm` sử dụng câu lệnh sau
 ```sh
@@ -127,4 +127,7 @@ mdadm --add /dev/md0 /dev/sdd
 mdadm --manage /dev/md0 -f /dev/sdd
 mdadm --manage /dev/mdadm -r /dev/sdd
 ```
+<<<<<<< HEAD
 
+=======
+>>>>>>> e24e3a8db2717699ed055c5d2312112517d15c0d
