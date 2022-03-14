@@ -94,7 +94,7 @@ mdadm --create --verbose /dev/md0 --level=4 --raid-devices=4 /dev/sdb /dev/sdc /
 ![](./images/raid5.png)
 
 - Thay vì lưu trữ bản sao hoàn chỉnh của dữ liệu, RAID-5 có thể tiết kiệm dung lượng bằng cách lưu trữ dữ liệu chẵn lẻ. Tính chẵn lẻ cho phép các RAID tái tạo lại dữ liệu được lưu trữ trên các ổ đĩa bị lỗi
-- RAID-5 có thể được sử dụng trên ba hoặc nhiều đĩa, với nhiều đĩa dự phòng hoặc không
+- RAID-5 có thể được sử dụng trên ba hoặc nhiều đĩa, với nhiều đĩa dự phòng hoặc không.
 - Kích thước thiết bị RAID-5 sẽ là (N-1)*S, giống như RAID-4
 - Sự khác biệt lớn giữa RAID-5 và -4 là thông tin chẵn lẻ được phân phối đồng đều giữa các ổ đĩa tham gia
 - Nếu một trong các đĩa bị lỗi, tất cả dữ liệu vẫn còn nguyên vẹn, nhờ vào thông tin chẵn lẻ. Nếu có sẵn các đĩa dự phòng, việc xây dựng lại sẽ bắt đầu ngay sau khi thiết bị bị lỗi. Nếu hai đĩa bị lỗi đồng thời, tất cả dữ liệu sẽ bị mất. RAID-5 có thể tồn tại sau một lần hỏng đĩa, nhưng không thể tồn tại hai hoặc nhiều hơn
