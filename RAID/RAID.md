@@ -52,7 +52,6 @@ mdadm: array /dev/md0 started
 - Các thiết bị phải có cùng kích thước 
 - Không thể cứu dữ liệu nếu một ổ đĩa bị lỗi
 - Hiệu suất đọc và ghi sẽ tăng lên, vì việc đọc và ghi được thực hiện song song trên các thiết bị
-- 
 
 >> Để tạo 2 đĩa ở chế độ RAID 0 bằng `mdadm`
 ```sh
@@ -127,7 +126,4 @@ mdadm --add /dev/md0 /dev/sdd
 mdadm --manage /dev/md0 -f /dev/sdd
 mdadm --manage /dev/mdadm -r /dev/sdd
 ```
-<<<<<<< HEAD
 
-=======
->>>>>>> e24e3a8db2717699ed055c5d2312112517d15c0d
