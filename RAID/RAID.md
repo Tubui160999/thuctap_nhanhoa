@@ -128,6 +128,9 @@ mdadm --manage /dev/mdadm -r /dev/sdd
 ```
 
 >> RAID-0 được sử dụng cho các ổ đĩa tạm cần tốc độ cao, ví dụ: lưu trữ cơ sở dữ liệu web. Không nên sử dụng RAID 0 để lưu trữ dữ liệu lâu dài
+
 >> RAID-1 được sử dụng để lưu trữ và quản lý những tài liệu quan trọng như các máy chủ lưu thông tin khách hàng hoặc tài khoản
+
 >> RAID-5 đang là sự lựa chọn tối ưu nhờ khả năng sửa lỗi lẫn tăng tốc độ đọc ghi dữ liệu
+
 >> RAID-10 là sự kết hợp của RAID-1 và RAID-0 
