@@ -133,8 +133,6 @@ mdadm --manage /dev/mdadm -r /dev/sdd
 
 >> RAID-5 đang là sự lựa chọn tối ưu nhờ khả năng sửa lỗi lẫn tăng tốc độ đọc ghi dữ liệu
 
-<<<<<<< HEAD
 >> RAID-10 là sự kết hợp của RAID-1 và RAID-0 
-=======
->> RAID-10 là sự kết hợp của RAID-1 và RAID-0 
->>>>>>> 5df3ea9d7e10018b3a9a7bf4dac09365699fdbda
+
+
