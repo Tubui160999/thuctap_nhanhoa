@@ -73,7 +73,7 @@ emyPxgcYxn/eR44/KJ4EBs+lVDR3veyJm+kXQ99b21/+jh5Xos1AnX5iItreGCc=
 -----END CERTIFICATE-----
 ```
 
-![](./images/chain.png)
+![](./images/chainn.png)
 
 Bước 7: `Verify certificate`
 - Copy Let’s Encrypt folder trong `/etc/letsencrypt/live/$domain` tới thư mục `/opt/zimbra/ssl/letsencrypt` và phân quyền cho thư mục với các lệnh bên dưới
