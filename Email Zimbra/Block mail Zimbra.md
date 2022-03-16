@@ -36,7 +36,7 @@ zmmtactl restart
 tubui16091999@gmail.com REJECT
 ```
 
-![](./images/addject.png)
+![](./images/addreject.png)
 
 - Khởi động lại `zmmtactl` 
 ```sh
@@ -54,7 +54,7 @@ zmmtactl restart
 gmail.com REJECT
 ```
 
-![](./images/addject2.png)
+![](./images/addreject2.png)
 
 - Khởi động lại `zmmtactl`
 ```sh
