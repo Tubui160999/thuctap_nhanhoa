@@ -5,7 +5,7 @@
 
 - Tại tab `General` -> `DomainKeys Identified Mail (DKIM)` click như hình dưới và `Show public key` để lấy thông tin giá trị và tên bản ghi DKIM
 
-![](./images/adddomain.png)
+![](./images/editdomain.png)
 
 - Tạo bản ghi với thông tin DKIM vừa được lấy
 
