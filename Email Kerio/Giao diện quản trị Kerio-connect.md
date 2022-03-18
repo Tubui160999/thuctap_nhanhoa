@@ -187,25 +187,6 @@ Tại Dashboard hiển thị các thông tin
 ### 3.11 MyKerio
 MyKerio là dịch vụ đám mây cho phép quản lý nhiều phiên bản của các thiết bị Kerio Connect thông qua giao diện web tập trung 
 Thêm Kerio-connect và MyKerio
-- Để liên kết Kerio Connect với MyKerio, ta cần phải kích hoạt quyền truy cập vào MyKerio trong Kerio Connect và đăng ký MyKerio
-	+ Trong giao diện quản trị, vào `Configuration` -> `MyKerio`
-	+ Chọn `Enable communication with MyKerio`
-	+ Chọn `Apply`
-	+ Nhấp vào liên kết `MyKerio`
-
-	![](./images/configmykerio.png)
-	
-	+ Nhập user và password để đăng nhập
-
-	![](./images/configmykerio1.png)
-	
-	+ Liên kết Kerio Connect với MyKerio thành công. Tại đây ta có thể thấy mail server Kerio Connect trong trang tổng quan MyKerio
-
-	![](./images/configmykerio2.png)
-	
->> Tại MyKerio ta có thể vào giao diện quản trị của Kerio Connect 
-
-![](./images/mykerio.png)
 
 ### 3.12 Spam Filter
 Để phát hiện và loại bỏ thư rác, Kerio Connect sử dụng các phương pháp sau:
@@ -217,7 +198,8 @@ Thêm Kerio-connect và MyKerio
 
 Để đặt giới hạn cho việc đánh dấu thư là thư rác hay không phải thư rác ta làm như sau:
 - `Tag Score` - Nếu tin nhắn đạt đến điểm thẻ, Kerio Connect sẽ đánh dấu nó là thư rác 
-- `Blocl Score` - Nếu tin nhắn đạt đến điểm khối, Kerio Connect sẽ hủy tin nhắn đó
+- `Block Score` - Nếu tin nhắn đạt đến điểm khối, Kerio Connect sẽ hủy tin nhắn đó
+
 
 ![](./images/spamfilter.png)
 
