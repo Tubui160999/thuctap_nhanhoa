@@ -276,7 +276,7 @@ Nhóm địa chỉ IP giúp dễ dàng xác định ai có quyền truy cập, v
 
 ![](./images/ipaddgr.png)
 
-Để thêm add IP vào một IP Address Group mới ta làm như hình dưới
+Để thêm add IP vào một IP Address Group mới ta làm như hình dưới.
 
 ![](./images/tubui.png)
 
