@@ -124,6 +124,26 @@ Tại Dashboard hiển thị các thông tin
 
 ![](./images/configarchiving.png)
 
+- Thực hiện Download archive từ ngày `13/03/2022` đến ngày `18/03/2022` . Giải nén ta được file `.txt` chứa toàn bộ tin nhắn được gửi trên Kerio Connect Client từ ngày `13/03/2022` đến ngày `18/03/2022` 
+
+![](./images/messages.png)
+
+Khôi phục dữ liệu
+- Tại `Archiving and Backup` -> `Current status` nhấp vào `Start Now` để tạo một bản sao lưu đầy đủ (chọn đường dẫn lưu bản sao lưu `/mnt/backup`)
+
+![](./images/restore.png)
+
+- Stop Kerio Connect
+- Vào thư mục cài đặt Kerio Connect `/opt/kerio/mailserver`
+- Chạy lệnh
+```sh
+./kmsrecover /mnt/backup
+```
+
+![](./images/restore1.png)
+
+>> Restore thành công
+
 ### 3.6 Delivery 
 - Trong Kerio-connect, ta có thể lên lịch để
 	+ Tải xuống thư từ máy chủ POP3 từ xa 
