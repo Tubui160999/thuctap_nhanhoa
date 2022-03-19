@@ -54,6 +54,7 @@ vi /var/www/html/tubui.xyz/index.html
 ![](./images/apache1.png)
 
 Bước 4: Cài đặt Virtual Hosts
+
 Virtual Host là file cấu hình trong Apache để cho phép nhiều domain cùng chạy trên một máy chủ. Ta có thể thêm domain vào máy chủ và cấu hình chúng riêng rẽ. Mỗi cấu hình đó được gọi là Virtual host. Mỗi Virtual host sẽ quy định cho mỗi tên miền riêng. Ta có thể tạo ra nhiều Vhost để thêm domain vào VPS và chạy nhiều web trên 1 server
 
 - Tạo file vhost 
@@ -78,6 +79,7 @@ vi /etc/httpd/conf.d/tubui.xyz.conf
 ![](./images/tubuiapache.png)
 
 ### 1.2 Cài đặt MySQL (MariaDB) 
+
 Để cài đặt MariaDB cần thực hiện như sau:
 Bước 1: Cài đặt mariadb và mariadb server
 ```sh
@@ -150,7 +152,7 @@ phpinfo();
 ?>
 ```
 
-Bước 8: Cấu hình firwall cho phép truy cập dịch vụ web 
+Bước 8: Cấu hình firewall cho phép truy cập dịch vụ web 
 ```sh
 firewall-cmd --zone=public --add-service=http --permanant
 firewall-cmd --reload
@@ -227,7 +229,7 @@ cp wp-config-sample.php wp-config.php
 vi wp-config.php
 ```
 
-- Thay đổi các giá trị `DB_NAME`, `DB_USER`, `DB_PASSWORD` thành các giá trị đã thiết lập ở bước 2
+- Thay đổi các giá trị `DB_NAME`, `DB_USER`, `DB_PASSWORD` thành các giá trị đã thiết lập ở Bước 2
 
 ![](./images/wpconfig.png)
 
@@ -240,7 +242,7 @@ systemctl reload httpd
 
 ![](./images/wordpr.png)
 
-- Chọn ngôn ngữ muốn thiết lâp và click `Tiếp tục`
+- Chọn ngôn ngữ muốn thiết lập và click `Tiếp tục`
 
 - Thiết lập các thông tin để cài đặt WordPress
 
