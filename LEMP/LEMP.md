@@ -240,5 +240,3 @@ systemctl restart nginx
 - Tiến hành thiết lập thông tin để cài đặt wordpress
 
 ![](./images/wpadmin1.png)
-
-- 
