@@ -54,5 +54,5 @@
 - Plugin System: Cho phép mở rộng chức năng DirectAdmin một cách dễ dàng
 - Live Updates: Quản trị viên máy chủ có thể nhấp vào nút 'Licensing/update' để xem trạng thái phiên bản và giấy phép hiện tại. Không cần phải tải xuống, giải nén và cài đặt theo thủ công - DA tự động thực hiện tất cả các bản cập nhật
 - Completely Customizable: Mọi khía cạnh của giao diện DirectAdmin đều có thể được thay đổi và các thiết kế mới được import dễ dàng thông qua menu “skin”
-- Automatic Recovery From Crashes: DirectAdmin TaskQueue đảm bảo rằng tất cả các dịch vụ luôn hoạt động. Nếu có sự cố, DirectAdmin sẽ cố gắng khắc phục sự cố bằng cách khởi động lại dịch vụ. Nếu không thành công, DirectAdmin sẽ thông báo cho quản trị viên máy chủ ngay lập tức
+- Automatic Recovery From Crashes: DirectAdmin TaskQueue đảm bảo rằng tất cả các dịch vụ luôn hoạt động. Nếu có sự cố, DirectAdmin sẽ cố gắng khắc phục sự cố bằng cách khởi động lại dịch vụ. Nếu không thành công, DirectAdmin sẽ thông báo cho quản trị viên máy chủ ngay lập tức.
 
