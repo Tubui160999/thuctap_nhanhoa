@@ -33,8 +33,8 @@ systemctl status nginx     // Xem trạng thái dịch vụ Nginx
 
 - Bước 3: Khởi động dịch vụ
 ```sh
-systemctl start httpd
-systemctl enable httpd
+systemctl start nginx
+systemctl enable nginx
 ```
 
 - Bước 4: Mở dịch vụ trên Firewalld
@@ -125,7 +125,7 @@ php -v
 
 - Bước 5: Khởi động lại Nginx để đảm bảo rằng nó hoạt động với PHP mới được cài đặt
 ```sh
-systemctl restart httpd
+systemctl restart nginx
 ```
 
 - Mặc định PHP sẽ thực thi file PHP gần nhất nếu không tìm thấy file PHP được request. Để ngăn chặn việc thực thi PHP không mong muốn ta làm như sau
