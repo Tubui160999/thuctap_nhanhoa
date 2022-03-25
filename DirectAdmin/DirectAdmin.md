@@ -56,3 +56,130 @@
 - Completely Customizable: Mọi khía cạnh của giao diện DirectAdmin đều có thể được thay đổi và các thiết kế mới được import dễ dàng thông qua menu “skin”
 - Automatic Recovery From Crashes: DirectAdmin TaskQueue đảm bảo rằng tất cả các dịch vụ luôn hoạt động. Nếu có sự cố, DirectAdmin sẽ cố gắng khắc phục sự cố bằng cách khởi động lại dịch vụ. Nếu không thành công, DirectAdmin sẽ thông báo cho quản trị viên máy chủ ngay lập tức.
 
+# Cài đặt DirectAdmin trên Centos 7
+## Đăng ký tài khoản DirectAdmin
+- Ta vào trang chủ DirectAdmin để đăng ký tài khoản và license dùng thử: https://www.directadmin.com/
+
+![](./images/datrial.png)
+
+- Sau khi Submit ta sẽ nhận được `User ID` và `Password` được gửi về email
+
+![](./images/datrial1.png)
+
+- Đăng nhập bằng `User ID` và `Password` đã nhận được và vào phần `Get Trial` nhập thông tin
+
+![](./images/gettrial.png)
+
+- Nếu trước đó đã `Get trial` mà vẫn còn thời hạn ta có thể sửa thông tin `Server IP` và `Hostname` để thay đổi thông tin như mong muốn
+
+![](./images/gettrial2.png)
+
+# Cài đặt DirectAdmin
+- Cài đặt các gói cần thiết cho DirectAdmin
+```sh
+yum install wget gcc gcc-c++ flex bison make bind bind-libs bind-utils openssl openssl-devel perl quota libaio libcom_err-devel libcurl-devel gd zlib-devel zip unzip libcap-devel cronie bzip2 cyrus-sasl-devel perl-ExtUtils-Embed autoconf automake libtool which patch mailx bzip2-devel lsof glibc-headers kernel-devel expat-devel
+```
+```sh
+yum install -y psmisc net-tools systemd-devel libdb-devel perl-DBI xfsprogs rsyslog logrotate crontabs file
+```
+
+- Tải DirectAdmin và phân quyền cho nó
+```sh
+wget http://www.directadmin.com/setup.sh && chmod 755 setup.sh
+```
+```sh
+./setup.sh
+```
+
+- Sau khi chạy chương trình ta phải nhập license key 
+
+![](./images/dalicensekey.png)
+
+- Sau khi cài đặt xong ta tiến hành lấy thông tin user password tại `/usr/local/directadmin/scripts/setup.txt`
+```sh
+vi /usr/local/directadmin/scripts/setup.txt
+```
+
+![](./images/setuptxt.png)
+
+- Đăng nhập bằng cách nhập `địa_chỉ_IP:2222` trên trình duyệt web 
+
+![](./images/login.png)
+
+![](./images/login1.png)
+
+# Các chức năng trên DirectAdmin
+## Admin
+Gồm các option chính:
+- Account Manager
+- Server Manager
+- Admin Tool
+- System Info & Files
+- Extra Features
+
+### Account Manager
+Là nơi thực hiện các thao tác quản lý đối với các tài khoản
+- Add New User: Thêm các User mới. mỗi User sẽ được gán cho từng Package User
+- Show All User: Xem tất cả các User, Reseller, Admin
+- My User: Xem tất cả các User
+- Manage User Packages: Quản lý tất cả các Package của các User
+- Move Users between Resellers: Chuyển đổi các User giữa các Resellers
+- Edit User Message: Tạo mẫu email cho thông báo đến User mới
+- Change Password: Thay đổi mật khẩu của các User
+- Create Reseller: Tạo mới Reseller
+- List Reseller: Hiển thị danh sách các Reseller
+- Manage Reseller Packages: Quản lý tất cả các Package của các Resellers
+- Create Administrator: Tạo mới Admin
+- List Administrator: Xem dánh sách các Admin
+- Suspension Message
+### Server Manager
+- Administrator Settings: Cho phép thiết lập đối với server 
+- Custom HTTPD Configurations: Hiển thị các file `.conf` của các domain, có thể truy cập để chỉnh sửa theo ý muốn
+- DNS Administration: Quản lý DNS 
+- IP Management: Quản lý IP
+- Ngoài ra còn các tùy chọn khác nhu `Name Servers` , `Multi Server Setup`, `PHP Configuration`, `SSH Keys`
+### Admin Tools
+- Admin Backup/Transfer: Tại đây ta có thực hiện Backup, lên lịch Backup, Restore
+- Brute Force Monitor: Hiển thị các log đăng nhập không thành công
+- Process Monitor: Hiển thị các tiến trình đang chạy
+- Mail Queue Administration: Hiển thị tất cả các thư có trong hàng đợi
+- Service Monitor: Hiển thị các dịch vụ đang chạy
+- System Backup: Thiết lập cho việc backup dữ liệu
+- Message All Users: Gửi tin nhắn tới tất cả các User trên DirectAdmin
+- Skin Manager: Thiết lập chủ đề cho bảng điều khiển
+- Customize Evolution Skin: Giao diện tiến hóa
+### System Info & Files
+- All User Cron Jobs: Quản lý các Cron Jobs của các User
+- File Manager: Quản lý các File 
+- File Editor: Chỉnh sửa các file của hệ thống 
+- System Information: Hiển thị thông tin của hệ thống
+- Log Viewer: Hiển thị các log `Cron Log`, `DirectAdmin Error Log`, `DirectAdmin Task Queue Log`, `DirectAdmin Login Log`
+- Complete Usage Statistics: Thống kể sử dụng hệ thống 
+
+## User
+### Account Manager
+- Domain Setup: Cấu hình Domain, tại đây có thể chỉnh sửa domain của user, lựa chọn phiên bản PHP cho user
+- Subdomain Management: Quản lý các subdomain
+- DNS Management: Quản lý các bản ghi DNS
+- SSL Certificates: Quản lý chứng chỉ SSL cho domain của user
+- FTP Managerment: Quản lý kết nối FTP
+- MySQL Managerment: Quản lý database
+- Site redirection: Chuyển hướng trang web
+- PHP settings: Cài đặt PHP
+### Email Manager
+- Quản lý email, tài khoản email, tự động chuyển tiếp email, bộ lọc thư, thư rác, bản ghi MX
+### Advanced Features
+- Apache handlers: Trình xử lý apache
+- Catch -All E-mail
+- Create/Restore Backups: Sao lưu/phục hồi dữ liệu
+- Cron Jobs: Tạo các Job tự động 
+- Custom Error Pages: Tùy chỉnh trang lỗi
+- Two-Step Authentication: Xác thực 2 bước 
+- Password Protected Directory: Đặt mật khẩu cho đường dẫn muốn bảo mật 
+- SSH key: Tạo khóa SSH
+### System Info & File
+- Tương tự như bên Admin, gồm quản lí file, các thông tin về hệ thống, các modules đã cài đặt
+
+### Extra Features
+- Webmail Roundcube: Hệ thống mail server được build sẵn trên DirectAdmin
+- phpMyAdmin: Quản trị các database trên hệ thống
