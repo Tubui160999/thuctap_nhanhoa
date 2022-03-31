@@ -1,0 +1,58 @@
+# Cài đặt Windows Server 2019
+- Windows Server 2019 là phiên bản hệ điều hành cho máy chủ được Microsoft phát triển mới nhất tính đến thời điểm hiện tại. So với các bản phát hành trước Windows Server 2019 có sự cải tiến rất nhiều về bảo mật, hiệu suất cho người dùng
+- Windows Server 2019 có tất cả 3 phiên bản chính là: Essentials, Standard, Datacenter. Nhưng thông dụng nhất hiện nay là Standard và Datacenter 
+## Tính năng mới trong Windows Server 2019
+- Đây là phiên bản mới nhất của hệ điều hành máy chủ Microsoft, được xây dựng trên nền tảng vững chắc của Windows Server 2016
+- Mang đến nhiều đổi mới khác nhau trên bốn chủ đề khác nhau, đó là Nền tảng ứng dụng, Đám mây, Bảo mật	và Cơ sở hạ tầng siêu hội tụ (HCI)
+- Có nhiều tính năng mới như System Insight mang lại khả năng phân tích dự đoán cục bộ cho Windows Server
+## Yêu cầu hệ thống
+- Bộ xử lý 64-bit 1.4 GHz
+- Bộ nhớ: RAM 4 GB
+- Dung lượng ổ đĩa 64 GB
+## Cài đặt Windows Server 2019
+Bước 1: Download file iso Windows Server 2019
+
+Bước 2: Sau khi Download Windows Server 2019, ta bắt đầu quá trình cài đặt Windows Server 2019 với việc khởi động VMWare Workstation và tạo máy ảo
+- Chọn `Typical`
+
+![](./images/typical.png)
+
+- Lựa chọn `I will install the operating system later. The virtual machine will be created with a blank hard disk`
+
+![](./images/newvm.png)
+
+- Lựa chọn hệ điều hành cài đặt, chọn `Microsoft Windows` và `Windows Server 2016` (Vì phiên bản VMWare cũ nên chưa được cập nhật vì thế ta có thể chọn 2016 vì 2016 và 2019 là tương tự)
+
+![](./images/newvm1.png)
+
+- Tiếp đến, ta cần đặt tên cho máy ảo Windows Server 2019 để phân biệt với các máy ảo khác và nơi lưu trữ máy ảo
+
+![](./images/newvm2.png)
+
+- Khai báo thông số dung lượng ổ đĩa trên máy ảo khi tạo ra và lựa chọn `Store virtual disk as a single file`
+
+![](./images/newvm3.png)
+
+- Nhấn `Finish` để hoàn tất
+
+![](./images/newvm4.png)
+
+- Chọn `Edit virtual machine settings` để thêm iso vào trước khi bật máy ảo
+
+![](./images/iso.png)
+
+- Hệ thống khởi động, chọn ngôn ngữ và thời gian và bàn phím sau đó ấn `Next`
+
+
+
+- Chọn `Install Now`
+
+
+
+- Lựa chọn hệ điều hành muốn cài đặt
+
+
+- Lựa chọn `Custom: Install Windows only (advanced)` 
+
+
+- Tiếp đến lựa chọn phân vùng để bung bộ cài đặt Windows Server 2019 -> chọn `Next`
