@@ -63,4 +63,4 @@ Bước 2: Cài đặt Ubuntu server 21.10
 ![](./images/wait.png)
 
 - Sau khi cài đặt xong chọn `Reboot` để hoàn thành
-- Đăng nhập với user và password
+- Đăng nhập với user và password.
