@@ -1,5 +1,5 @@
 # Cài đặt Ubuntu server 21.10
-Bước 1: Tải file iso của Ubuntu
+Bước 1: Tải file iso của Ubuntu 21.10 tại
 
 http://mirrors.nhanhoa.com/ubuntu-releases/21.10/ubuntu-21.10-live-server-amd64.iso
 
