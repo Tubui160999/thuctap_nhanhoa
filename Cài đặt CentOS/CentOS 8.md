@@ -60,7 +60,7 @@ Bước 2: Cài CentOS 8
 
 - Chọn `Begin Instalation` để thực hiện cài đặt
 - Sau đó nhập mật khẩu cho tài khoản `root` và chờ các bước cài đặt diễn ra
-- Sau khi cài đặt hoàn tất, chọn `Reboot System` đê máy khởi động lại và bắt đầu đăng nhập vào OS với tài khoản root và mật khẩu nhập trước nó
+- Sau khi cài đặt hoàn tất, chọn `Reboot System` để máy khởi động lại và bắt đầu đăng nhập vào OS với tài khoản root và mật khẩu nhập trước nó
 
 ![](./images/reboot.png)
 
