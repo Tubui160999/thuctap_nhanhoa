@@ -44,8 +44,8 @@ mkdir backup
 - Mount ổ cứng với thư mục
 
 ```sh
-mount /dev/sdb1/ /data/
-mount /dev/sdb2/ /Os/
+mount /dev/sdb1/ /Os/
+mount /dev/sdb2/ /data/
 mount /dev/sdb3/ /backup/
 ```
 
