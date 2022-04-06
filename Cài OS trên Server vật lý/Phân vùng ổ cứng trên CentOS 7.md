@@ -22,6 +22,8 @@ fdisk /dev/sdb
 fdisk -l
 ```
 
+![](./images/mount1.png)
+
 - Định dạng phân vùng đĩa cứng
 ```sh
 mkfs.xfs /dev/sdb1
@@ -29,7 +31,7 @@ mkfs.xfs /dev/sdb2
 mkfs.xfs /dev/sdb3
 ```
 
-![](./images/mount1.png)
+
 
 - Tạo các thư mục muốn mount
 
