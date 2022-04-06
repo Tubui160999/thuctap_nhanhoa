@@ -73,3 +73,5 @@ Bước 2: Cài đặt CentOS 6
 - Sau khi hệ thống cài đặt xong. Chọn `Reboot` để khởi động lại
 
 ![](./images/centos6-19.png)
+
+- Kiểm tra hệ điều hành
