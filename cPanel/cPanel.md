@@ -24,7 +24,7 @@
 
 - FTP Connections (Kết nối FTP): Cung cấp tổng quan về kết nối FTP
 
-- Back Up và Back Up Wizard: Sao lưu các tập tin trên web hosting dễ dàng 
+- Back Up và Back Up Wizard: Sao lưu các tập tin trên web hosting dễ dàng.
 
 - Images (Hình ảnh): Tính năng này cho phép người dùng thay đổi kích thước, chuyển đổi và xem hình ảnh
 

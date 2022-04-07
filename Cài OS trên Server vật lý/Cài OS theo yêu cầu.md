@@ -160,3 +160,82 @@ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Terminal Server\WinStations\
 - Tại cửa sổ `Edit DWORD`, click chọn `Decimal` để chuyển đổi format giá trị cấu hình hiện tại sang format số thập phân. Nhập giá trị port Remote Desktop muốn thay đổi là `6789`. Sau cùng bấm `OK` để hoàn tất việc thay đổi port cho dịch vụ `Remote Desktop` trên Windows Server 2019
 
 ![](./images/os34.png)
+
+3. Cấu hình tường lửa cho cổng RDP tùy chọn 
+- Để cấu hình tường lửa cho RDP ta làm như sau
+Bước 1: Nhấn tổ hợp `Win + R` để mở `Run` và nhập `wf.msc` rồi nhấn Enter.
+
+Bước 2: Trong cửa sổ `Windows Defender Firewall with Advanced Security` chọn `Inbound Rules` ở menu bên tay trái
+
+Bước 3: Chọn `New Rule` ở thanh bên tay phải 
+
+![](./images/os35.png)
+
+Bước 4: Trong cửa sổ `New Inbound Rule Wizard` chọn `Port` và nhấn `Next` để tiếp tục
+
+![](./images/os36.png)
+
+Bước 5: Tại mục `Does this rule apply to TCP or UDP`, chọn TCP. Sau đó tại mục `Does this rule apply to all local ports or specifi local ports`, ta chọn `Special local ports` và nhập vào ô giá trị cổng mà ta thiết lập (6789). Nhấn `Next` để tiếp tục 
+
+![](./images/os37.png)
+
+Bước 6: Tại menu `Action` chọn `Allow the Connection` rồi chọn `Next` 
+
+![](./images/os38.png)
+
+Bước 7: Trong menu `Profile`, chọn tất cả các mục để tối đa khả năng truy cập hoặc bỏ chọn ở mục `Public` để chặn các truy cập từ mạng công cộng. Nhấn `Next` để tiếp tục
+
+![](./images/os39.png)
+
+Bước 8: Đặt tên cho quy tắc mới và mô tả quy tắc mới (tùy chọn) rồi nhấn Finish để hoàn thành
+
+![](./images/os40.png)
+
+4. Kết nối Remote Desktop bằng một cổng tùy chỉnh
+
+Bước 1: Mở `Run` nhập `mstsc` rồi nhấn Enter
+
+Bước 2: Trong cửa sổ Remote Desktop Connection, nhập địa chỉ `IP:port` để kết nối. Ở đây ta nhập
+```sh
+172.16.3.200:6789
+```
+
+![](./images/os41.png)
+
+- Nhập User và Password để kết nối
+
+![](./images/os42.png)
+
+5. Chỉ allow cho IP 172.16.3.188 được phép remote vào
+
+- Tiến hành xóa Rule cũ để chặn tất cả các IP remote đến Windows Server 2019
+- Tạo rule mới chỉ Allow cho IP 172.16.3.188 và 172.16.2.27 được phép remote thông qua port 6789
+
+- New Rule -> chọn `Custom` -> `Next` 
+
+![](./images/os43.png)
+
+- Tại tab `Program`. Chọn `All programs` -> `Next`
+
+![](./images/os44.png)
+
+- Tại tab `Protocol and Ports`, option `Protocol type` chọn `TCP`, tại option `Local port` chọn `Specific Ports` và nhập port muốn thiết lập
+
+![](./images/os45.png)
+
+- Tại tab `Scope` option `Which remote IP addresses does this rule apply to`, chọn `These IP addresses` và thêm IP muốn allow
+
+![](./images/os46.png)
+
+- Tại tab `Action`. Chọn `Allow the connection` -> `Next`
+
+![](./images/os47.png)
+
+- Tại tab `Profile` -> `Next`
+
+![](./images/os48.png)
+
+- Nhập tên cho rule
+
+![](./images/os49.png)
+
