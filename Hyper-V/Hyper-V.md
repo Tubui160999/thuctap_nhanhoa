@@ -93,15 +93,9 @@
 
 ![](./images/hyperv22.png)
 
-- Chỉnh số core máy ảo = 8 -> Chọn `Settings` -> `Processor`
-
-![](./images/hyperv24.png)
-
-
-
 - Máy ảo vừa được tạo. Để bắt đầu, hãy nhấp chuột phải vào nó và chọn `Start`
 
-![](./images/hyperv23.png)
+![](./images/hyperv24.png)
 
 - Để kết nối bảng điều khiển của máy ảo, hãy nhấp chuột phải vào nó và chọn `Connect`
 
