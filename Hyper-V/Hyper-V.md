@@ -14,7 +14,7 @@
 	+ Tăng cường bảo mật
 	+ Trung tâm dữ liệu động 
 	+ Hợp nhất server
- 
+
 # Cài đặt Hyper-V
 - Chạy `Server Manager` và nhấp vào `Add roles and features`
 
@@ -102,6 +102,8 @@
 ![](./images/hyperv21.png)
 
 - Nhấp vào `Finish` để hoàn tất
+
+![](./images/hyperv22.png)
 
 - Máy ảo vừa được tạo. Để bắt đầu, hãy nhấp chuột phải vào nó và chọn `Start`
 

@@ -166,7 +166,7 @@
 
 - User Preferences (Tùy chọn người dùng): Đặt tùy chọn người dùng 
 
-- User Manager (Trình quản lý người dùng): Đặt và chỉnh sửa quyền và quyền của người dùng
+- User Manager (Trình quản lý người dùng): Đặt và chỉnh sửa quyền và quyền của người dùng.
 
 ## Ưu nhược điểm của cPanel
 cPanel đang được các nhà chuyên môn đánh giá là công cụ quản trị web hosting tốt nhất và được nhiều người sử dụng nhất hiện nay. Chương trình hỗ trợ khá nhiều tính năng dành cho các nhà quản trị web sử dụng dễ dàng. Tuy nhiên, bên cạnh đó cũng có một số hạn chế của cPanel, khiến người dùng khó quản lý web hosting của mình hơn
