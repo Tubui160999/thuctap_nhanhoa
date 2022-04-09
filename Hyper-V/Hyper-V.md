@@ -1,8 +1,20 @@
-# Cài đặt Hyper-V
+# Hyper-V là gì
 
 **Yêu cầu**
 - Cài đặt Hyper-V để tạo 2 VM: mỗi VM cấu hình 8 RAM + 8 core + 200Gb Disk lấy ở Data 500GB, IP 172.16.3.201/20 172.16.3.202/20 Gateway 172.16.10.1
 
+- Hyper-V là công nghệ ảo hóa thể hệ mới của Microsoft, dựa trên nền tảng hypervisor. Mang đến cho người dùng (chủ yếu là doanh nghiệp) một nền tảng ảo hóa mạnh và linh hoạt, có khả năng mở rộng, tính tin cậy và sẵn sàng cao
+
+- Đặc biệt ảo hóa Hyper-V giúp đáp ứng nhu cầu ảo hóa mọi cấp độ cho môi trường doanh nghiệp. Ngoài ra, người dùng không cần phải mua thêm bất cứ phần mềm nào khi muốn nâng cấp hoặc khai thác csac tính năng ảo hóa của server
+
+# Hyper-V mang lại lợi ích gì?
+- Hyper-V cung cấp cơ sở hạ tầng phần mềm và các công cụ quản lý cơ bản mà doanh nghiệp có thể sử dụng để tạo ra và quản lý một môi trường điện toán máy chủ ảo hóa. Một môi trường máy chủ ảo hóa với các tính năng nổi bật sau:
+	+ Ảo hóa linh hoạt
+	+ Nền tảng ảo hóa mạnh
+	+ Tăng cường bảo mật
+	+ Trung tâm dữ liệu động 
+	+ Hợp nhất server
+ 
 # Cài đặt Hyper-V
 - Chạy `Server Manager` và nhấp vào `Add roles and features`
 
@@ -73,7 +85,7 @@
 
 ![](./images/hyperv17.png)
 
-- Chỉ định bộ nhớ cho máy ảo
+- Chỉ định bộ nhớ cho máy ảo (8 GB RAM)
 
 ![](./images/hyperv18.png)
 
@@ -95,7 +107,36 @@
 
 - Máy ảo vừa được tạo. Để bắt đầu, hãy nhấp chuột phải vào nó và chọn `Start`
 
-![](./images/hyperv24.png)
-
 - Để kết nối bảng điều khiển của máy ảo, hãy nhấp chuột phải vào nó và chọn `Connect`
 
+![](./images/hyperv28.png)
+
+- Làm tương tự với VM-2
+
+![](./images/hyperv26.png)
+
+- Cài OS cho máy ảo để tiến hành đặt địa chỉ IP
+
+![](./images/hyperv27.png)
+
+![](./images/hyperv29.png)
+
+![](./images/hyperv31.png)
+
+- Tiến hành đặt địa chỉ IP cho 2 máy ảo 
+
+- VM-1 IP: 172.16.3.201/20 Gateway: 172.16.10.1
+
+![](./images/hyperv32.png)
+
+![](./images/hyperv33.png)
+
+- VM-2 IP: 172.16.3.202/20 Gateway: 172.16.10.1
+
+![](./images/hyperv34.png)
+
+![](./images/hyperv35.png)
+
+- Chỉnh thông số `Number of virtual processors` (8 core)
+
+![](./images/hyperv36.png)
