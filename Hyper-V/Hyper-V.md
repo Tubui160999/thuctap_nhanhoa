@@ -103,8 +103,6 @@
 
 - Nhấp vào `Finish` để hoàn tất
 
-![](./images/hyperv22.png)
-
 - Máy ảo vừa được tạo. Để bắt đầu, hãy nhấp chuột phải vào nó và chọn `Start`
 
 - Để kết nối bảng điều khiển của máy ảo, hãy nhấp chuột phải vào nó và chọn `Connect`
