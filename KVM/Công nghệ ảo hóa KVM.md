@@ -37,7 +37,7 @@
 
 - Ở loại thứ 1, Hypervisor tương tác trược tiếp với phần cứng nên việc quản lý và phân phối tài nguyên được tối ưu và hiệu quả hơn so với loại 2, vì vậy khi triển khai trong thực tế, ảo hóa loại 1 (Bare-Metal Hypervisor) được sử dụng trong các trường hợp thử nghiệm, hoặc mục đích học tập
 
-# Công nghệ KVM
+# Công nghệ ảo hóa KVM
 
 ## KVM là gì?
 - KVM là viết tắt của Kernel Virtualization Machine, là giải pháp ảo hóa cho hệ thống Linux trên nền tảng phần cứng x86 có các module mở rộng hỗ trợ ảo hóa(Intel VTx hoặc AMD-V). KVM là một module của kernel linux hỗ trợ cơ chế mapping các chỉ dẫn trên CPU ảo (của guest VM) sang chỉ dẫn trên CPU vật lý (của máy chủ chứa VM). Ảo hóa KVM có cách hoạt động giống như người quản lý, chia sẻ các nguồn tài nguyên ổ đĩa, network, CPU một cách công bằng.
