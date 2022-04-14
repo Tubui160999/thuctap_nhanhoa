@@ -168,14 +168,11 @@ Bước 2: Install KVM
 ```sh
 yum install -y qemu-kvm libvirt libvirt-python libguestfs-tools virt-install bridge-utils
 ```
-```sh
-yum -y install qemu-img virt-install
-```
 
 Bước 2: Tạo disk
 - Tạo một ổ đĩa cho máy ảo khai báo dung lượng và định dạng là raw
 ```sh
-yum -y install qemu-img virt-install
+yum -y install qemu-img
 ```
 
 ```sh
@@ -199,7 +196,7 @@ Copy file xml đã chỉnh sửa vào node KVM
 ```sh
 <domain type='kvm'>
   <name>tubui</name>
-  <uuid>ef1bf2d4-bad4-11ec-b49c-b8ca3a5eb048</uuid>
+  <uuid>4e893778-bbb5-11ec-9796-b8ca3a5eb048</uuid>
   <memory unit='KiB'>4194304</memory>
   <currentMemory unit='KiB'>2097152</currentMemory>
   <vcpu placement='static'>5</vcpu>
@@ -328,3 +325,4 @@ virt-manager
 - Tiến hành cài đặt OS cho máy ảo như bình thường
 
 ![](./images/tubui.png)
+
