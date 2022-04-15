@@ -146,6 +146,7 @@ virt-install \
 
 ![](./images/kvm14.png)
 
+![](./images/kvm30.png)
 
 ### Tạo máy ảo từ image có sẵn 
 
@@ -155,16 +156,14 @@ virt-install \
 --ram 1024 \
 --vcpus 1 \
 --os-variant=rhel7 \
---disk path=/var/lib/libvirt/images/vm3.img,format=qcow2,bus=virtio,cache=none \
+--disk path=/var/lib/libvirt/images/tubui1.img,size=20 \
 --network bridge=br0 \
 --hvm --virt-type kvm \
 --vnc --noautoconsole \
 --import
 ```
 
->> Tiến hành cài đặt như bình thường
-
-![](./images/kvm15.png)
+![](./images/vm3.png)
 
 ## Tạo máy ảo từ Internet
 
@@ -183,3 +182,26 @@ virt-install \
 --extra-args 'console=ttyS0,115200n8 serial'
 ```
 
+- Nhập `c`
+
+![](./images/kvmi.png)
+
+- Set time zone
+
+![](./images/kvmi1.png)
+
+- Chọn nơi chứa disk
+
+![](./images/kvmi2.png)
+
+![](./images/kvmi3.png)
+
+- Chọn `b` để bắt đầu cài máy ảo
+
+![](./images/kvmi4.png)
+
+![](./images/kvmi5.png)
+
+![](./images/kvmi6.png)
+
+![](./images/kvmi7.png)

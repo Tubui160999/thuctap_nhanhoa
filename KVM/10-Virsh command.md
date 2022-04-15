@@ -105,3 +105,49 @@ virt-clone --original=VM1 --name=VM10 --auto-clone
 ```
 
 ![](./images/kvm28.png)
+
+- Clone custom tên máy clone và disk image
+```sh
+virt-clone --original=VM1 --name=VMcustom --file=/var/lib/libvirt/images/VMcustom.qcow2
+```
+
+![](./images/kvm35.png)
+
+## Các thao tác Snapshot
+- Tạo snapshot:
+```sh
+virsh snapshot-create-as --domain VM1 --name "Begin" --description "khoi tao"
+```
+
+- Show các bản snapshot đã tạo
+```sh
+virsh snapshot-list VM1
+```
+
+- Xem thông tin chi tiết bản snapshot đã tạo 
+```sh
+virsh snapshot-info VM1 --snapshotname "Begin"
+```
+
+- Reverse lại 1 bản snapshot đã tạo
+```sh
+virsh snapshot-revert VM1 --snapshotname "Begin"
+```
+
+- Xóa một bản snapshot đã tạo
+```sh
+virsh snapshot-delete VM1 --snapshotname "Begin"
+```
+
+## Console máy ảo
+Bước 1: Khởi động dịch vụ trên các máy ảo để cho phép máy chủ KVM console không cần mật khẩu
+```sh
+systemctl start serial-getty@ttyS0.service
+systemctl enable serial-getty@ttyS0.service
+```
+
+Bước 2: Trên host KVM, thực hiện lệnh
+```sh
+virsh console VM1
+```
+

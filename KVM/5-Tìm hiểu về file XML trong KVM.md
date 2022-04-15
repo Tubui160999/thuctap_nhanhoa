@@ -190,7 +190,34 @@ uuid
 
 ![](./images/uuid.png)
 
-Bước 4: Khởi tạo máy ảo
+Bước 4: Tạo bridge và gắn interface em1 cho bride đó
+- Cấu hình lại em1 để em1 được gắn vào br0
+
+```sh
+DEVICE=em1
+BOOTPROTO=none
+ONBOOT=yes
+BRIDGE=br0
+```
+
+![](./images/em1.png)
+
+- Đặt IP cho br0
+
+```sh
+DEVICE=br0
+TYPE=Bridge
+BOOTPROTO=none
+ONBOOT=yes
+IPADDR=172.16.2.100
+NETMASK=255.255.240.0
+GATEWAY=172.16.10.1
+DNS1=8.8.8.8
+```
+
+![](./images/br0.png)
+
+Bước 5: Khởi tạo máy ảo
 Copy file xml đã chỉnh sửa vào node KVM
 
 ```sh
@@ -326,3 +353,4 @@ virt-manager
 
 ![](./images/tubui.png)
 
+![](./images/kvm29.png)
