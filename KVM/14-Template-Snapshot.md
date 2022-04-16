@@ -65,7 +65,7 @@ virt-clone --original=VMcustom --name=VMtemplate1 --file=/var/lib/libvirt/images
 	
 	+ Ổ đĩa được chồng lên được tạo ra có định dạng qcow2, hoàn toàn trống và nó có thể chứa lượng dữ diệu giống như ổ đĩa ban đầu. External snapshot có thể được tạo với bất kì định dạng ổ đĩa nào mà libvirt hỗ trợ
 
-## Tạo và Internal Snapshot
+## Tạo và quản lý Internal Snapshot
 - Internal snapshot chỉ hỗ trợ định dạng `qcow2` vì thế hãy xem rằng ổ đĩa của máy ảo thuộc định dạng nào bằng câu lệnh `qemu-img info <Đường_dẫn_chứa_file_disk>` . Nếu định dạng ổ đĩa không phải là `qcow2`, hãy chuyển nó sang định dạng này bằng câu lệnh `qemu-img convert`
 
 - Một vài câu lệnh `virsh` liên quan tới việc tạo và quản lý máy ảo:
@@ -82,8 +82,89 @@ virt-clone --original=VMcustom --name=VMtemplate1 --file=/var/lib/libvirt/images
 
 - Để tạo mới một internal snapshot, thông thường ta hay sử dụng câu lệnh 
 ```sh
-virsh snapshot-create-as VMtemplate1 --name "Snapshot 1" --description "First snapshot" --atomic
+virsh snapshot-create-as --domain kvm1 --name "kvm1-snapshot" --description "khoi tao"
 ```
 
-- Trong đó "Snapshot 1" là tên của snapshot, "First snapshot" là mô tả và --atomic bao đảm cho việc toàn vẹn dữ liệu
+![](./images/snapshot1.png)
 
+- Để xem thông tin về bản Snapshot đã tạo
+```sh
+virsh snapshot-list kvm1
+```
+
+![](./images/snapshot2.png)
+
+- Để xem thông tin chi tiết của bản Snapshot đã tạo
+```sh
+virsh snapshot-info kvm1 --snapshotname "kvm1-snapshot"
+```
+
+![](./images/snapshot3.png)
+
+### Để Reverse lại 1 bản snapshot đã tạo
+- Để quay trở lại trạng thái của một internal snapshot, dùng câu lệnh: `virsh snapshot-revert <vm_name> --snapshotname "<snapshot_name>"`
+
+```sh
+virsh snapshot-revert kvm1 --snapshotname "kvm1-snapshot"
+```
+
+- Người dùng có thể tạo ra nhiều các snapshot, thêm tùy chọn `--parent` vào `snapshot-list` để hiển thị ra danh sách snapshots theo mối quan hệ cha con
+- Để xóa một internal snapshot, dùng câu lệnh: `virsh snapshot-delete <vm_name> --snapshotname "<snapshot_name>"`
+
+```sh
+virsh snapshot-delete kvm1 --snapshotname "kvm1-snapshot"
+```
+
+## Tạo và quản lý External Snapshot
+- Tiến hành kiểm tra ổ đĩa mà máy ảo muốn tạo snapshot đang sử dụng bằng câu lệnh `virsh domblklist <vm_name> --details`
+
+- Tiến hành tạo snapshot bằng câu lệnh `virsh snapshot-create-as <vm_name> snapshot1 "<external_snapshot>" --disk-only --atomic`
+
+```sh
+virsh snapshot-create-as --domain VMcustom --name "VMcustom-snapshot-external" --disk-only --description "khoi tao"
+```
+
+![](./images/snapshot4.png)
+
+
+- Trong đó `--disk only` dùng để tạo snapshot cho riêng ổ đĩa
+
+
+- Check lại danh sách bằng câu lệnh `virsh snapshot-list <vm_name> --snapshotname "<snapshot_name>"`
+```sh
+virsh snapshot-info VMcustom --snapshotname "VMcustom-snapshot-external"
+```
+
+![](./images/snapshot5.png)
+
+- Lúc này ổ đĩa cũ đã biến thành trạng thái `read-only`, VM dùng ổ đĩa mới để lưu dữ liệu và `backingfile` sẽ là ổ đĩa ban đầu
+
+![](./images/snapshot6.png)
+
+### Để Reverse trạng thái Snapshot
+- Để revert lại trạng thái của external snapshot, ta phải cấu hình file XML bằng tay bởi libvirt vẫn chưa hỗ trợ cho việc này
+
+- Lấy đường dẫn tới ổ đĩa được tạo ra khi snapshot
+```sh
+virsh snapshot-dumpxml VMcustom --snapshotname "VMcustom-snapshot-external" | grep 'source file' | head -1
+```
+
+![](./images/snapshot7.png)
+
+- Kiểm tra để đảm bảo nó còn nguyên vẹn và được kết nối với backing file
+```sh
+qemu-img info /var/lib/libvirt/images/VMcustom.VMcustom-snapshot-external | grep backing
+```
+
+![](./images/snapshot8.png)
+
+- Chỉnh sửa bằng tay file XML, bỏ ổ đĩa hiện tại và thay thế ở trạng thái snapshot1
+
+![](./images/snapshot9.png)
+
+- Kiểm tra xem máy ảo đã sử dụng đúng ổ chưa
+```sh
+virsh domblklist VMcustom
+```
+
+![](./images/snapshot10.png)
